@@ -37,7 +37,7 @@ from sklearn.metrics import (
 )
 
 # Cargar dataset limpio de diabetes
-df = pd.read_csv('../../../datasets/pima_indian_diabetes_dataset/cleaned_dataset.csv')
+df = pd.read_csv('../../../datasets/pima_indian_diabetes_dataset/full_dataset.csv')
 
 # Separar características y variable objetivo
 X = df.drop(columns=['Outcome'])
@@ -45,7 +45,7 @@ y = df['Outcome']
 
 # División estratificada en entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
+    X, y, test_size=0.2, random_state=44
 )
 
 # Almacenar resultados para cada profundidad
