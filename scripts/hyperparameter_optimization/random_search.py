@@ -24,7 +24,7 @@ param_dist = {
 }
 
 # Configurar RandomizedSearchCV para buscar los mejores hiperparámetros con salida detallada
-random_search = RandomizedSearchCV(estimator=clf, param_distributions=param_dist, n_iter=10, cv=5, scoring='roc_auc', verbose=3, random_state=42)
+random_search = RandomizedSearchCV(estimator=clf, param_distributions=param_dist, n_iter=25, cv=5, scoring='roc_auc', verbose=3)
 
 # Ajustar el modelo con los datos
 random_search.fit(X, y)

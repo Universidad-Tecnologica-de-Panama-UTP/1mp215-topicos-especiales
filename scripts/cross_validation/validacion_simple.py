@@ -14,7 +14,7 @@ y = df['Outcome']
 auc_values = []
 
 # Ejecutar 20 iteraciones con diferentes divisiones aleatorias
-for i in range(20):
+for i in range(100):
     print(f"Ejecución {i + 1}:")
     # División 80/20 de entrenamiento-prueba con estado aleatorio variable
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=i, stratify=y)

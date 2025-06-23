@@ -14,7 +14,7 @@ y = df['Outcome']
 auc_values = []
 
 # Configurar K-Fold con 5 divisiones
-kf = KFold(n_splits=5, shuffle=True, random_state=42)
+kf = KFold(n_splits=5, shuffle=True)
 
 # Iterar sobre cada división
 fold = 1
