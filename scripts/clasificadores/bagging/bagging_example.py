@@ -21,7 +21,7 @@ print(f"AUC promedio (5-CV) - DecisionTreeClassifier: {cv_scores_clf.mean():.4f}
 # Validación cruzada (5 pliegues) para BaggingClassifier
 bagging_clf = BaggingClassifier(
     estimator=DecisionTreeClassifier(random_state=42),
-    n_estimators=10,
+    n_estimators=20,
     random_state=42
 )
 cv_scores_bagging = cross_val_score(bagging_clf, X_train, y_train, cv=5, scoring='roc_auc')
