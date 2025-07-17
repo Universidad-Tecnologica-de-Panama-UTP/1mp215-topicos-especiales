@@ -14,9 +14,11 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Aplicar PCA conservando el 95% de la varianza
-pca = PCA(n_components=0.95, random_state=42)
+pca = PCA(n_components=0.99, random_state=42)
 X_compressed = pca.fit_transform(X_scaled)
 X_reconstructed = pca.inverse_transform(X_compressed)
+print(f"Dimensión original: {X.shape}")
+print(f"Dimensión comprimida (PCA): {X_compressed.shape}")
 
 # Desnormalizar para visualizar
 X_reconstructed_original = scaler.inverse_transform(X_reconstructed)
