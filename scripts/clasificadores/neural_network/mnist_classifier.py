@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import time
 
 # ─── Global Config ─────────────────────────────────────────────
-EPOCHS = 10
+EPOCHS = 40
 BATCH_SIZE = 64
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # ───────────────────────────────────────────────────────────────
